@@ -16,7 +16,7 @@ window.onload = function() {
   var css = document.createElement('link');
   css.rel = 'stylesheet';
   css.type = 'text/css';
-  css.href = '../style/map.css';
+  css.href = '../styles/map.css';
   document.getElementsByTagName('head')[0].appendChild(css);
   css.onload = add_content;
 }
@@ -48,11 +48,11 @@ var add_content = function()
 {
   var html_to_add = "<div id='map-cluster' class='map'></div>";
   document.getElementById('InSTRiiTExtension').innerHTML = html_to_add;
-  myRequire('https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js');
-  myRequire('https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js');
-  myRequire('https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js');
-  myRequire('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js');
-  myRequire('https://code.jquery.com/jquery-2.1.1.min.js');
+  myRequire('../leaflet/mapbox-v2.2.3.js');
+  myRequire('../leaflet/L.Control.Locate.min.js');
+  myRequire('../leaflet/leaflet.markercluster.js');
+  myRequire('../materialize/materialize.min.js');
+  myRequire('../materialize/jquery-2.1.1.min.js');
   plan();
 };
 
