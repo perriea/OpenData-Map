@@ -64,9 +64,7 @@ function localisation (mapCluster)
 {
   mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000}).on('locationfound', function(e)
   {
-    var radius = e.accuracy / 2;
     L.marker(e.latlng).addTo(mapCluster).bindPopup('Vous êtes ici').openPopup();
-    L.circle(e.latlng, radius).addTo(mapCluster);  
   });
 }
 
