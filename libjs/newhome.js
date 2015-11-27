@@ -16,7 +16,7 @@ window.onload = function() {
   var css = document.createElement('link');
   css.rel = 'stylesheet';
   css.type = 'text/css';
-  css.href = '../style/map.css';
+  css.href = './map.css';
   document.getElementsByTagName('head')[0].appendChild(css);
   css.onload = add_content;
 }
@@ -48,11 +48,9 @@ var add_content = function()
 {
   var html_to_add = "<div id='map-cluster' class='map'></div>";
   document.getElementById('InSTRiiTExtension').innerHTML = html_to_add;
-  myRequire('../leaflet/mapbox-v2.2.3.js');
-  myRequire('../leaflet/L.Control.Locate.min.js');
-  myRequire('../leaflet/leaflet.markercluster.js');
-  myRequire('../materialize/materialize.min.js');
-  myRequire('../materialize/jquery-2.1.1.min.js');
+  myRequire('https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js');
+  myRequire('https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js');
+  myRequire('https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js');
   plan();
 };
 
@@ -112,7 +110,8 @@ function plan ()
 {
   var cities = new L.LayerGroup();
 
-  L.mapbox.accessToken = 'token_api_mapbox';
+  //L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
+  L.mapbox.accessToken = '';
   var mapCluster = L.mapbox.map('map-cluster').setView([46.81509864599243, 3.0322265625], 6)
                     .addLayer(L.mapbox.tileLayer('mapbox.streets'))
                     .addControl(L.mapbox.geocoderControl('mapbox.places', {keepOpen: false}));
