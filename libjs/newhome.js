@@ -1,7 +1,7 @@
 /*
-** Début du projet : 23/11/2015
-** Derniere modification : 27/11/2015
-** Projet realisé par : 
+** Project start : 23/11/2015
+** Last modification : 27/11/2015
+** Project directed by : 
 ** - perrie_a (PERRIER Aurélien
 ** - martin_c (Martinelli Sébastien)
 ** - leon_v (Léon Vincent)
@@ -10,7 +10,7 @@
 */
 
 /*
-** Chargement des CSS
+** Loading CSS
 */
 window.onload = function() {
   var css = document.createElement('link');
@@ -23,7 +23,7 @@ window.onload = function() {
 
 
 /*
-** Chargement AJAX des JS
+** AJAX loading of JS files
 */
 function myRequire(url) {
     var ajax = new XMLHttpRequest();
@@ -58,8 +58,8 @@ var add_content = function()
 
 
 /*
-** Ckecker angle droit de la map
-** affiche zone des celibataires de Ivry-sur-Seine + deux lignes de metro parisien
+** Checker in right corner of the map
+** displays single area of Ivry-sur-Seine (France) + two Paris metro lines
 */
 function Checked (mapCluster, L) 
 {
@@ -74,8 +74,7 @@ function Checked (mapCluster, L)
 
 
 /*
-** Unique Localisation de l'utilisateur
-** Limite 7s et du zoom a 18
+** Location of the user
 */
 function Localisation (mapCluster) 
 {
@@ -89,8 +88,7 @@ function Localisation (mapCluster)
 
 
 /*
-** Unique Localisation de l'utilisateur
-** Formation des cluster via les donnee GeoJSON
+** Cluster training data via GeoJSON
 */
 function LoadData (mapCluster) 
 {
@@ -107,9 +105,8 @@ function LoadData (mapCluster)
 
 
 /*
-** Accès a l'API Mapbox
-** Affichage carte via une page Web
-** Lancement des diverses methode du dessus
+** Access to the API MapBox
+** Map display via web page
 */
 function plan ()
 {
