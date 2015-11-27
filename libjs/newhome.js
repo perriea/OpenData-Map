@@ -21,6 +21,7 @@ window.onload = function() {
   css.onload = add_content;
 }
 
+
 /*
 ** Chargement AJAX des JS
 */
@@ -108,7 +109,7 @@ function LoadData (mapCluster)
 ** Affichage carte via une page Web
 ** Lancement des diverses methode du dessus
 */
-function plan()
+function plan ()
 {
   var cities = new L.LayerGroup();
 
