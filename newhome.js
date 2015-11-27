@@ -62,7 +62,7 @@ function checked (mapCluster, L)
 
 function localisation (mapCluster) 
 {
-  mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000}).on('locationfound', function(e)
+  mapCluster.locate({setView: true, watch: false, maxZoom: 20, timeout: 7000}).on('locationfound', function(e)
   {
     L.marker(e.latlng).addTo(mapCluster).bindPopup('Vous êtes ici').openPopup();
   });
