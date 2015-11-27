@@ -1,12 +1,16 @@
 /*
-** Début du projet : 23/11/2015
-** Derniere modification : 27/11/2015
-** Projet realisé par perrie_a, martin_c, leon_v
-** Projet OPENDATA - InStriit
+** Project start : 23/11/2015
+** Last modification : 27/11/2015
+** Project directed by : 
+** - perrie_a (PERRIER Aurélien
+** - martin_c (Martinelli Sébastien)
+** - leon_v (Léon Vincent)
+** ETNA - École des Technologies Numériques en Alternance
+** Projet OPENDATA - SCC1
 */
 
 /*
-** Chargement des CSS, JS puis de la map
+** Loading CSS
 */
 window.onload = function() {
   var css = document.createElement('link');
@@ -17,6 +21,10 @@ window.onload = function() {
   css.onload = add_content;
 }
 
+
+/*
+** AJAX loading of JS files
+*/
 function myRequire(url) {
     var ajax = new XMLHttpRequest();
     ajax.open('GET', url, false);
@@ -47,30 +55,42 @@ var add_content = function()
 };
 
 
-
-function checked (mapCluster, L) 
+/*
+** Checker in right corner of the map
+** displays single area of Ivry-sur-Seine (France) + two Paris metro lines
+*/
+function Checked (mapCluster, L) 
 {
   L.control.layers({
     'Vue map': L.mapbox.tileLayer('mapbox.streets').addTo(mapCluster),
     'Vue satellite': L.mapbox.tileLayer('mapbox.satellite')
   }, {
-    'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('./geojson/celib.geojson'),
-    'Metro 7': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson')
+    'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('../example/geojson/celib.geojson'),
+    'Ligne Metro': L.mapbox.featureLayer().loadURL('../example/geojson/subway.geojson')
   }).addTo(mapCluster);
 }
 
 
-function localisation (mapCluster) 
+/*
+** Location of the user
+*/
+function Localisation (mapCluster) 
 {
-  mapCluster.locate({setView: true, watch: false, maxZoom: 20, timeout: 7000}).on('locationfound', function(e)
+  mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000})
+  .on('locationfound', function(e)
   {
-    L.marker(e.latlng).addTo(mapCluster).bindPopup('Vous êtes ici').openPopup();
+    L.marker(e.latlng).addTo(mapCluster)
+     .bindPopup('Vous êtes ici').openPopup();
   });
 }
 
+
+/*
+** Cluster training data via GeoJSON
+*/
 function LoadData (mapCluster) 
 {
-  L.mapbox.featureLayer().loadURL('./geojson/stations.geojson').on('ready', function(e) 
+  L.mapbox.featureLayer().loadURL('../example/geojson/stations.geojson').on('ready', function(e) 
   {
     var clusterGroup = new L.MarkerClusterGroup();
     e.target.eachLayer(function(layer) 
@@ -81,16 +101,21 @@ function LoadData (mapCluster)
   });
 }
 
-function plan()
+
+/*
+** Access to the API MapBox
+** Map display via web page
+*/
+function plan ()
 {
   var cities = new L.LayerGroup();
 
-  L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
-  var mapCluster = L.mapbox.map('map-cluster')
-                    .setView([46.81509864599243, 3.0322265625], 6)
+  //L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
+  L.mapbox.accessToken = '';
+  var mapCluster = L.mapbox.map('map-cluster').setView([46.81509864599243, 3.0322265625], 6)
                     .addLayer(L.mapbox.tileLayer('mapbox.streets'))
                     .addControl(L.mapbox.geocoderControl('mapbox.places', {keepOpen: false}));
-  localisation(mapCluster);
+  Localisation(mapCluster);
   LoadData(mapCluster);
-  checked(mapCluster, L);
+  Checked(mapCluster, L);
 }
