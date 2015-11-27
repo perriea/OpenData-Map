@@ -16,7 +16,7 @@ window.onload = function() {
   var css = document.createElement('link');
   css.rel = 'stylesheet';
   css.type = 'text/css';
-  css.href = '../styles/map.css';
+  css.href = '../style/map.css';
   document.getElementsByTagName('head')[0].appendChild(css);
   css.onload = add_content;
 }
