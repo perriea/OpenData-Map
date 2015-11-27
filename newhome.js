@@ -110,8 +110,7 @@ function plan ()
 {
   var cities = new L.LayerGroup();
 
-  //L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
-  L.mapbox.accessToken = '';
+  L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
   var mapCluster = L.mapbox.map('map-cluster').setView([46.81509864599243, 3.0322265625], 6)
                     .addLayer(L.mapbox.tileLayer('mapbox.streets'))
                     .addControl(L.mapbox.geocoderControl('mapbox.places', {keepOpen: false}));
