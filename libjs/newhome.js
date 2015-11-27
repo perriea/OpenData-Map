@@ -51,6 +51,8 @@ var add_content = function()
   myRequire('https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js');
   myRequire('https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js');
   myRequire('https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js');
+  myRequire('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js');
+  myRequire('https://code.jquery.com/jquery-2.1.1.min.js');
   plan();
 };
 
@@ -113,7 +115,7 @@ function plan ()
 {
   var cities = new L.LayerGroup();
 
-  L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
+  L.mapbox.accessToken = 'token-api-mapbox';
   var mapCluster = L.mapbox.map('map-cluster').setView([46.81509864599243, 3.0322265625], 6)
                     .addLayer(L.mapbox.tileLayer('mapbox.streets'))
                     .addControl(L.mapbox.geocoderControl('mapbox.places', {keepOpen: false}));
