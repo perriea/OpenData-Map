@@ -16,7 +16,7 @@ window.onload = function() {
   var css = document.createElement('link');
   css.rel = 'stylesheet';
   css.type = 'text/css';
-  css.href = './map.css';
+  css.href = '../style/map.css';
   document.getElementsByTagName('head')[0].appendChild(css);
   css.onload = add_content;
 }
@@ -58,14 +58,14 @@ var add_content = function()
 ** Ckecker angle droit de la map
 ** affiche zone des celibataires de Ivry-sur-Seine + deux lignes de metro parisien
 */
-function checked (mapCluster, L) 
+function Checked (mapCluster, L) 
 {
   L.control.layers({
     'Vue map': L.mapbox.tileLayer('mapbox.streets').addTo(mapCluster),
     'Vue satellite': L.mapbox.tileLayer('mapbox.satellite')
   }, {
-    'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('./geojson/celib.geojson'),
-    'Ligne Metro': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson')
+    'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('../example/geojson/celib.geojson'),
+    'Ligne Metro': L.mapbox.featureLayer().loadURL('../example/geojson/subway.geojson')
   }).addTo(mapCluster);
 }
 
@@ -74,11 +74,13 @@ function checked (mapCluster, L)
 ** Unique Localisation de l'utilisateur
 ** Limite 7s et du zoom a 18
 */
-function localisation (mapCluster) 
+function Localisation (mapCluster) 
 {
-  mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000}).on('locationfound', function(e)
+  mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000})
+  .on('locationfound', function(e)
   {
-    L.marker(e.latlng).addTo(mapCluster).bindPopup('Vous êtes ici').openPopup();
+    L.marker(e.latlng).addTo(mapCluster)
+     .bindPopup('Vous êtes ici').openPopup();
   });
 }
 
@@ -89,7 +91,7 @@ function localisation (mapCluster)
 */
 function LoadData (mapCluster) 
 {
-  L.mapbox.featureLayer().loadURL('./geojson/stations.geojson').on('ready', function(e) 
+  L.mapbox.featureLayer().loadURL('../example/geojson/stations.geojson').on('ready', function(e) 
   {
     var clusterGroup = new L.MarkerClusterGroup();
     e.target.eachLayer(function(layer) 
@@ -111,11 +113,10 @@ function plan()
   var cities = new L.LayerGroup();
 
   L.mapbox.accessToken = 'pk.eyJ1IjoicGVycmllYSIsImEiOiJjaWhjNHB5bWowMDg5djBrajkybDU0bGJ5In0.JfXhgcmOrOi0GNQjmjXmLg';
-  var mapCluster = L.mapbox.map('map-cluster')
-                    .setView([46.81509864599243, 3.0322265625], 6)
+  var mapCluster = L.mapbox.map('map-cluster').setView([46.81509864599243, 3.0322265625], 6)
                     .addLayer(L.mapbox.tileLayer('mapbox.streets'))
                     .addControl(L.mapbox.geocoderControl('mapbox.places', {keepOpen: false}));
-  localisation(mapCluster);
+  Localisation(mapCluster);
   LoadData(mapCluster);
-  checked(mapCluster, L);
+  Checked(mapCluster, L);
 }
