@@ -15185,6 +15185,26 @@
           48.81349800006438
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Small astronaut",
+        "icon": {
+            "iconUrl": "http://www.online-image-editor.com//styles/2014/images/example_image.png",
+            "iconSize": [50, 50], 
+            "iconAnchor": [25, 25], 
+            "popupAnchor": [0, -25],
+            "className": "dot"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3836040496826167,
+          48.81635927146624
+        ]
+      }
     }
   ]
 }
