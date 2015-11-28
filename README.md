@@ -50,7 +50,6 @@ Thanks
 
 **NProgress** © 2015, PERRIER Aurélien, MARTINELLI Sébastien & LEON Vincent 
 Released under the [MIT License].
-Authored and maintained by Rico Sta. Cruz with help from contributors.
 
 [MIT License]: http://mit-license.org/
 
