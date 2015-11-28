@@ -11,21 +11,21 @@ Installation
 ### API MapBox
 
 In Newhome.js :
-js~~~~
+~~~ js
 function plan ()
 {
 	var cities = new L.LayerGroup();
   	L.mapbox.accessToken = 'api_tocken';
   	...
 }
-~~~~~~
+~~~
 If you do not change the API token you'll get a blank page.
 
 
 ### Options Menu
 
 You can customize the Action menu to display the data you want to display (for that you have data).
-js~~~~
+~~~ js
 function Checked (mapCluster, L) 
 {
   L.control.layers({
@@ -35,7 +35,7 @@ function Checked (mapCluster, L)
     'Subway': L.mapbox.featureLayer().loadURL('URL_API')
   }).addTo(mapCluster);
 }
-~~~~~
+~~~
 
 Resources
 ---------
