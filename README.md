@@ -3,7 +3,7 @@ OpenData Map
 
 Projet Sandwich Class Camp proposed by **Instriit** (http://instriit.com) in partnership with l'**ETNA** (http://www.etna-alternance.net).
 
-Dynamic display of map data Open Data to encourage the purchase in real estate.
+Dynamic display of map data **Open Data** to encourage the purchase in real estate.
 
 Installation
 ------------
