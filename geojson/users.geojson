@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Small astronaut",
+        "icon": {
+            "iconUrl": "http://www.online-image-editor.com//styles/2014/images/example_image.png",
+            "iconSize": [50, 50], 
+            "iconAnchor": [25, 25], 
+            "popupAnchor": [0, -25],
+            "className": "dot"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3836040496826167,
+          48.81635927146624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.376995086669922,
+          48.812007248285155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3680686950683594,
+          48.82455361424646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3848915100097656,
+          48.807202628138455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4011993408203125,
+          48.821502084523495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.398195266723633,
+          48.81488979939129
+        ]
+      }
+    }
+  ]
+}
