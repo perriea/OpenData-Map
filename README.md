@@ -48,7 +48,8 @@ Resources
 Thanks
 ------
 
-**NProgress** © 2015, PERRIER Aurélien, MARTINELLI Sébastien & LEON Vincent 
+**OpenData Map** © 2015, PERRIER Aurélien, MARTINELLI Sébastien & LEON Vincent 
+
 Released under the [MIT License].
 
 [MIT License]: http://mit-license.org/
