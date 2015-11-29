@@ -74,13 +74,14 @@ function Checked (mapCluster, L)
 /*
 ** Location of the user
 */
-function Localisation (mapCluster) 
+function Localisation (mapCluster, cities) 
 {
   mapCluster.locate({setView: true, watch: false, maxZoom: 20, timeout: 7000})
   .on('locationfound', function(e)
   {
-    L.marker(e.latlng).addTo(mapCluster)
-     .bindPopup('Vous êtes ici').openPopup();
+    //L.marker(e.latlng).addTo(mapCluster).bindPopup('Vous êtes ici').openPopup();
+    var marker = L.marker([e.latitude, e.longitude]).bindPopup('Vous êtes ici');
+    cities.addLayer(marker);
   });
 }
 
@@ -114,7 +115,7 @@ function plan ()
   var mapCluster = L.mapbox.map('map-cluster').setView([46.81509864599243, 3.0322265625], 6)
                     .addLayer(L.mapbox.tileLayer('mapbox.streets'))
                     .addControl(L.mapbox.geocoderControl('mapbox.places', {keepOpen: false}));
-  Localisation(mapCluster);
+  Localisation(mapCluster, cities);
   LoadData(mapCluster);
   Checked(mapCluster, L);
 }
