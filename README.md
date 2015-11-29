@@ -48,8 +48,7 @@ function Checked (mapCluster, L)
 ~~~
 
 
-### Add new JS & CSS
-
+### Add new JS
 
 ~~~ js
 var add_content = function()
@@ -58,10 +57,10 @@ var add_content = function()
   document.getElementById('InSTRiiTExtension').innerHTML = html_to_add;
   myRequire('https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js');
   myRequire('URL_JS');
-  myRequire('URL_JS2');
   plan();
 };
 ~~~
+
 
 Resources
 ---------
