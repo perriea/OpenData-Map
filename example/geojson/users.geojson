@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PERRIER Aurelien",
+        "title": "PERRIER Aurelien",
+        "description": "Connecté & habite dans votre ville ! Aime les soirées entre amis.",
+        "marker-color": "#008000",
+        "marker-symbol": "circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3818874359130855,
+          48.815850612930184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MARTINELLI Sébastien",
+        "title": "MARTINELLI Sébastien",
+        "description": "Connecté & habite dans votre ville ! Aime le sport (><).",
+        "marker-color": "#008000",
+        "marker-symbol": "circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3871231079101562,
+          48.8112724538487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "LEON Vincent",
+        "title": "LEON Vincent",
+        "description": "Connecté & habite dans votre ville ! Aime l'informatique.",
+        "marker-color": "#008000",
+        "marker-symbol": "circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.388753890991211,
+          48.815341949232895
+        ]
+      }
+    }
+  ]
+}
