@@ -51,7 +51,7 @@ function Checked (mapCluster, L)
 {
   L.control.layers({
     'Vue map': L.mapbox.tileLayer('mapbox.streets').addTo(mapCluster),
-    'Vue satellite': L.mapbox.tileLayer('mapbox.satellite')
+    'Vue satellite': L.mapbox.tileLayer('mapbox.streets-satellite')
   }, {
     'District singles': L.mapbox.featureLayer().loadURL('./geojson/celib.geojson'),
     'Subway': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson'),
