@@ -15,7 +15,7 @@ In Newhome.js :
 function plan ()
 {
 	var cities = new L.LayerGroup();
-  	L.mapbox.accessToken = 'api_tocken';
+  	L.mapbox.accessToken = 'api_token';
   	...
 }
 ~~~
@@ -32,7 +32,7 @@ function Checked (mapCluster, L)
     'Street Map': L.mapbox.tileLayer('mapbox.streets').addTo(mapCluster),
     'Satellite': L.mapbox.tileLayer('mapbox.satellite')
   }, {
-    'Subway': L.mapbox.featureLayer().loadURL('URL_API')
+    'section': L.mapbox.featureLayer().loadURL('URL_API')
   }).addTo(mapCluster);
 }
 ~~~
