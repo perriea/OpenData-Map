@@ -76,7 +76,7 @@ function Checked (mapCluster, L)
 */
 function Localisation (mapCluster) 
 {
-  mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000})
+  mapCluster.locate({setView: true, watch: false, maxZoom: 1, timeout: 7000})
   .on('locationfound', function(e)
   {
     L.marker(e.latlng).addTo(mapCluster)
