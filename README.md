@@ -6,8 +6,8 @@ Projet Sandwich Class Camp proposed by **Instriit** (http://instriit.com) in par
 Dynamic display of map data **Open Data** to encourage the purchase in real estate.
 
 
-Installation
-------------
+Installation Widget
+-------------------
 
 Just write :
 ```html
@@ -45,6 +45,22 @@ function Checked (mapCluster, L)
     'section': L.mapbox.featureLayer().loadURL('URL_API')
   }).addTo(mapCluster);
 }
+~~~
+
+
+### Add new JS & CSS
+
+
+~~~ js
+var add_content = function()
+{
+  var html_to_add = "<div id='map-cluster' class='map'></div>";
+  document.getElementById('InSTRiiTExtension').innerHTML = html_to_add;
+  myRequire('https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js');
+  myRequire('URL_JS');
+  myRequire('URL_JS2');
+  plan();
+};
 ~~~
 
 Resources
