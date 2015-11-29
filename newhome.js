@@ -53,9 +53,9 @@ function Checked (mapCluster, L)
     'Vue map': L.mapbox.tileLayer('mapbox.streets').addTo(mapCluster),
     'Vue satellite': L.mapbox.tileLayer('mapbox.satellite')
   }, {
-    'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('./geojson/celib.geojson'),
-    'Ligne Metro': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson'),
-    'Utilisateurs': L.mapbox.featureLayer().loadURL('./geojson/users.geojson')
+    'District singles': L.mapbox.featureLayer().loadURL('./geojson/celib.geojson'),
+    'Subway': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson'),
+    'Users': L.mapbox.featureLayer().loadURL('./geojson/users.geojson')
   }).addTo(mapCluster);
 }
 
