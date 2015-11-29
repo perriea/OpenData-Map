@@ -9,9 +9,6 @@
 ** Projet OPENDATA - SCC1
 */
 
-/*
-** Loading CSS
-*/
 window.onload = function() {
   var css = document.createElement('link');
   css.rel = 'stylesheet';
@@ -21,10 +18,6 @@ window.onload = function() {
   css.onload = add_content;
 }
 
-
-/*
-** AJAX loading of JS files
-*/
 function myRequire(url) {
     var ajax = new XMLHttpRequest();
     ajax.open('GET', url, false);
@@ -54,11 +47,6 @@ var add_content = function()
   plan();
 };
 
-
-/*
-** Checker in right corner of the map
-** displays single area of Ivry-sur-Seine (France) + two Paris metro lines
-*/
 function Checked (mapCluster, L) 
 {
   L.control.layers({
@@ -66,14 +54,11 @@ function Checked (mapCluster, L)
     'Vue satellite': L.mapbox.tileLayer('mapbox.satellite')
   }, {
     'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('./geojson/celib.geojson'),
-    'Ligne Metro': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson')
+    'Ligne Metro': L.mapbox.featureLayer().loadURL('./geojson/subway.geojson'),
+    'Utilisateurs': L.mapbox.featureLayer().loadURL('./geojson/users.geojson')
   }).addTo(mapCluster);
 }
 
-
-/*
-** Location of the user
-*/
 function Localisation (mapCluster) 
 {
   mapCluster.locate({setView: true, watch: false, maxZoom: 18, timeout: 7000})
@@ -83,10 +68,6 @@ function Localisation (mapCluster)
   });
 }
 
-
-/*
-** Cluster training data via GeoJSON
-*/
 function LoadData (mapCluster) 
 {
   L.mapbox.featureLayer().loadURL('./geojson/stations.geojson').on('ready', function(e) 
@@ -100,11 +81,6 @@ function LoadData (mapCluster)
   });
 }
 
-
-/*
-** Access to the API MapBox
-** Map display via web page
-*/
 function plan ()
 {
   var cities = new L.LayerGroup();
