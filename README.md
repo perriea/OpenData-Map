@@ -9,11 +9,15 @@ Dynamic display of map data **Open Data** to encourage the purchase in real esta
 Installation Widget
 -------------------
 
-Just write :
+Just write in `<head>` :
 ```html
 <script src='./newhome.js'></script>
 ```
 
+In `<body>` :
+```html
+<div id='InSTRiiTExtension'></div>
+```
 
 Configuration
 ------------
