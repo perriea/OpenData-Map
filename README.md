@@ -5,7 +5,17 @@ Projet Sandwich Class Camp proposed by **Instriit** (http://instriit.com) in par
 
 Dynamic display of map data **Open Data** to encourage the purchase in real estate.
 
+
 Installation
+------------
+
+Just write :
+```html
+<script src='./newhome.js'></script>
+```
+
+
+Configuration
 ------------
 
 ### API MapBox
