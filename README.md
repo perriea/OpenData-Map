@@ -69,7 +69,6 @@ var add_content = function()
 Resources
 ---------
 
-- Materialize CSS (https://github.com/Dogfalo/materialize/)
 - LeafletJS (https://github.com/Leaflet/Leaflet/)
 - Mapbox JS (https://github.com/mapbox/mapbox.js/)
 
