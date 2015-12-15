@@ -1,7 +1,7 @@
 OpenData Map
 ============
 
-Projet Sandwich Class Camp proposed by **Instriit** (http://instriit.com) in partnership with l'**ETNA** (http://www.etna-alternance.net).
+Projet Sandwich Class Camp proposed by [Instriit] in partnership with l'[ETNA].
 
 Dynamic display of map data **Open Data** to encourage the purchase in real estate.
 
@@ -69,8 +69,8 @@ var add_content = function()
 Resources
 ---------
 
-- LeafletJS (https://github.com/Leaflet/Leaflet/)
-- Mapbox JS (https://github.com/mapbox/mapbox.js/)
+- [LeafletJS]
+- [Mapbox JS]
 
 
 Thanks
@@ -80,8 +80,12 @@ Thanks
 
 Released under the [MIT License].
 
-[MIT License]: http://mit-license.org/
-
 > GitHub [@perriea](https://github.com/perriea) &nbsp;&middot;&nbsp;
 > GitHub [@cenevol](https://github.com/cenevol) &nbsp;&middot;&nbsp;
 > GitHub [@Vincent--L](https://github.com/Vincent--L)
+
+[ETNA]: http://www.etna-alternance.net
+[Instriit]: http://instriit.com
+[LeafletJS]: https://github.com/Leaflet/Leaflet/
+[Mapbox JS]: https://github.com/mapbox/mapbox.js/
+[MIT License]: http://mit-license.org/
